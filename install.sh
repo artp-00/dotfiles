@@ -11,19 +11,21 @@ read -p "This program will override your current configuration of the follwing p
     - rofi
     - dunst
     - ~/.scripts
-Are you sure you want to override it ? (Ctrl-C if no)" -n1 -s
+Are you sure you want to override them ? (Ctrl-C if no)" -n1 -s
 
 echo ""
+
+# TODO: wrap rm in function in order to not print an error and remove symlinks gracefully
 
 rm ~/.zshrc;  ln -s "$(pwd)/.zshrc" ~/.zshrc
 rm ~/.bashrc;  ln -s "$(pwd)/.bashrc" ~/.bashrc
 sudo rm /etc/inputrc; sudo ln -s "$(pwd)/inputrc" /etc/inputrc
-rm ~/.config/i3/; ln -s "$(pwd)/i3" ~/.config/
+rm -rf ~/.config/i3/; ln -s "$(pwd)/i3" ~/.config/
 # TODO: vscode dotfiles
-rm -r ~/.config/picom/; ln -s "$(pwd)/picom" ~/.config/
-rm -r ~/.config/kitty/; ln -s "$(pwd)/kitty" ~/.config/
-rm -r ~/.config/rofi/; ln -s "$(pwd)/rofi" ~/.config/
-rm -r ~/.config/dunst/; ln -s "$(pwd)/dunst" ~/.config/
+rm -rf ~/.config/picom/; ln -s "$(pwd)/picom" ~/.config/
+rm -rf ~/.config/kitty/; ln -s "$(pwd)/kitty" ~/.config/
+rm -rf ~/.config/rofi/; ln -s "$(pwd)/rofi" ~/.config/
+rm -rf ~/.config/dunst/; ln -s "$(pwd)/dunst" ~/.config/
 # TODO: scripts
 
 
