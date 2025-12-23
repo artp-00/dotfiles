@@ -1,0 +1,16 @@
+configuration {
+    // display-ssh:    "";
+    // display-run:    "";
+    // display-drun:   "";
+    // display-window: "";
+    // display-combi:  "";
+    display-ssh:    "o";
+    display-run:    "o";
+    display-drun:   ">";
+    display-window: "o";
+    display-combi:  "o";
+    show-icons:     true;
+    font: "JetBrains Mono 14";
+}
+
+@theme "~/.config/rofi/kanagawa-paper.rasi"

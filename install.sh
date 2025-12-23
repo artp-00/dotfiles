@@ -30,5 +30,3 @@ rm -rf ~/.config/dunst/; ln -s "$(pwd)/dunst" ~/.config/
 
 
 echo "done"
-
-
