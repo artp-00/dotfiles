@@ -42,3 +42,20 @@ bindkey '^e' edit-command-line
 #compinit
 # End of lines added by compinstall
 
+# Zsh prompt setup
+_update_prompt() {
+    # Get current git branch
+    PS1_CMD1=$(git branch --show-current 2>/dev/null)
+    # Set cursor color to red (using ANSI escape code)
+    print -n "\033]12;red\007"
+}
+
+# Trigger the prompt update on each command
+precmd() {
+    _update_prompt
+}
+
+# Custom prompt with color formatting and git branch
+PROMPT="%F{#777777}[%F{yellow}%1~%F{#777777}-%F{#777777}${PS1_CMD1}%F{#777777}]$%f "
+
+alias ls=exa

@@ -1,1 +1,4 @@
-for personnal use only
+For personnal use only
+
+TODO:
+    .vimrc
