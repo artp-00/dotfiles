@@ -1,4 +1,3 @@
 For personnal use only
 
-TODO:
-    .vimrc
+archived due to switching to pure home manager configuration
